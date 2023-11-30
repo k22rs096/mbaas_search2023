@@ -36,13 +36,26 @@
     }
 
     function searchLevel() { 
-        let level = parseInt($("#level").val()); let TestDataClass = ncmb.DataStore(db); TestDataClass 
+        let level = parseInt($("#level").val()); 
+        let TestDataClass = ncmb.DataStore(db); 
+        TestDataClass 
         .equalTo("level", level) 
         .fetchAll() 
         .then(function(results) { 
             showResults(results); 
         }) 
     }
+
+    function searchLevelLT() { 
+        let level = parseInt($("#level").val()); 
+        let TestDataClass = ncmb.DataStore(db); 
+        TestDataClass 
+        .lessThan("level", level) 
+        .fetchAll() 
+        .then(function(results) { 
+            showResults(results); 
+            }) 
+            }
 
     function showResults(results) {
       // テーブルのヘッダを生成
