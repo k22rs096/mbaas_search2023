@@ -37,7 +37,7 @@
     }
 
     function searchnumber() { 
-        let number = parseInt($("#number").val()); 
+        let number = parseInt($("#level").val()); 
         let TestDataClass = ncmb.DataStore(db); 
         TestDataClass 
         .equalTo("number", number) 
@@ -48,7 +48,7 @@
     }
 
     function searchnumberLT() { 
-        let number = parseInt($("#number").val()); 
+        let number = parseInt($("#level").val()); 
         let TestDataClass = ncmb.DataStore(db); 
         TestDataClass 
         .lessThan("number", number) 
@@ -74,7 +74,7 @@
     }
 
     function searchnumberGT() { 
-        let number = parseInt($("#number").val(), 10);
+        let number = parseInt($("#level").val(), 10);
          let TestDataClass = ncmb.DataStore(db);
           TestDataClass 
           .greaterThan("number", number) 
@@ -93,8 +93,8 @@
     <input id="name" type="text" placeholder="sisetu name">
   </div>
   <div>
-    <label for="level">level:</label>
-    <input id="level" type="number" placeholder="monster level">
+    <label for="level">number:</label>
+    <input id="level" type="number" placeholder="sisetu number">
   </div>
   <div id="button">
     <button class="btn" onclick="fetchAll()">Fetch All</button>
