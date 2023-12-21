@@ -60,7 +60,7 @@
 
     function showResults(results) {
       // テーブルのヘッダを生成
-      let msg = "<table><tr><th>校舎番号</th><th>内容施設</th><th>attack</th><th>defence</th></tr>";
+      let msg = "<table><tr><th>校舎番号</th><th>内容施設</th></tr>";
       for (let i = 0; i < results.length; i++) {
         // 各データを収めた表の列を生成
         msg += "<tr>";
@@ -90,21 +90,21 @@
   <h1>九産大　検索</h1>
   <div>
     <label for="name">name:</label>
-    <input id="name" type="text" placeholder="sisetu name">
+    <input id="name" type="text" placeholder="施設名">
   </div>
   <div>
     <label for="level">number:</label>
-    <input id="level" type="number" placeholder="sisetu number">
+    <input id="level" type="number" placeholder="番号">
   </div>
   <div id="button">
-    <button class="btn" onclick="fetchAll()">Fetch All</button>
-    <button class="btn" onclick="searchSisetu()">sisetu</button>
+    <button class="btn" onclick="fetchAll()">一覧</button>
+    <button class="btn" onclick="searchSisetu()">施設検索</button>
     <br> 
-    <button class="btn" onclick="searchnumberLT()">number &lt</button>
-    <button class="btn" onclick="searchnumber()">number</button>
-    <button class="btn" onclick="searchnumberGT()">number &gt</button>
+    <button class="btn" onclick="searchnumberLT()">番号 &lt</button>
+    <button class="btn" onclick="searchnumber()">番号</button>
+    <button class="btn" onclick="searchnumberGT()">番号 &gt</button>
   </div>
-  <div id="message">message area</div>
+  <div id="message">検索結果</div>
 </body>
 
 </html>
