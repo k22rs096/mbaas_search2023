@@ -25,8 +25,9 @@
     }
 
     function searchSisetu(){
-        let sisetu = $("#sisetu").val();
+        let sisetu = $("#name").val();
         let TestDataClass = ncmb.DataStore(db);
+        console.log(sisetu);
         TestDataClass
         .equalTo("sisetu",sisetu)
         .fetchAll()
@@ -89,7 +90,7 @@
   <h1>mBaaS search</h1>
   <div>
     <label for="name">name:</label>
-    <input id="name" type="text" placeholder="monster name">
+    <input id="name" type="text" placeholder="sisetu name">
   </div>
   <div>
     <label for="level">level:</label>
